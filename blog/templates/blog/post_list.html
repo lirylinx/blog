@@ -13,30 +13,15 @@
 
     </div>
 
-    <div>
-
-        <h2><a href="#">Primeiro post</a> </h2></p>
-        <p>
-            Este eh o meu post na pagina da yotlanga. <br/>
-            Um espaco para compartilhamento e compras de conteudo digital <br/>
-            Entretendimento e Educacao.
-        </p>
-        <p> publicado: 12/01/2016, 20:25</p>
 
 
-    </div>
+{% for post in posts %}
 
     <div>
-
-        <h2><a href="#">Segundo post</a> </h2></p>
-        <p>
-            Chega de estar no anonimato, mostre o que sabes ao mundo <br/>
-            
-
-        </p>
-        <p> publicado: 12/01/2016, 20:25</p>
-
-
+        <p>publicado: {{ post.data_publicado }}</p>
+        <h1><a href="">{{ post.titulo }}</a></h1>
+        <p>{{ post.texto|linebreaks }}</p>
     </div>
+{% endfor %}
 
 </html>

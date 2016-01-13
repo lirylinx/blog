@@ -10,7 +10,7 @@ class Post(models.Model):
   data_publicado = models.DateTimeField(blank=True, null=True)
 
 
-def pZZublicado(self):
+def publicado(self):
   self.data_publicado = timezone.now()
   self.save()
 
